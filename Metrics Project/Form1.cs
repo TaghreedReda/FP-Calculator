@@ -13,10 +13,15 @@ namespace Metrics_Project
     public partial class Form1 : Form
     {
         public static int EI=0;
+        public static int EI_SUM = 0;
         public static int EO=0;
+        public static int EO_SUM = 0;
         public static int EQ = 0;
+        public static int EQ_SUM = 0;
         public static int ILF = 0;
+        public static int ILF_SUM = 0;
         public static int EIF = 0;
+        public static int EIF_SUM = 0;
         public static int DI = 0;
         public static int UFP = 0;
         public static double TCF = 0;
@@ -132,7 +137,7 @@ namespace Metrics_Project
       
         private void button1_Click(object sender, EventArgs e)
         {
-            UFP = EI + EO + EQ + ILF + EIF;
+            UFP = EI_SUM + EO_SUM + EQ_SUM + ILF_SUM + EIF_SUM;
             textBox8.Text = UFP.ToString();
         }
 
@@ -331,7 +336,32 @@ namespace Metrics_Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Text = DI.ToString();
+              textBox1.Text = DI.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            EI_SUM += EI;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            EO_SUM += EO;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            EQ_SUM += EQ;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ILF_SUM += ILF;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            EIF_SUM += EIF;
         }
     }
 }
