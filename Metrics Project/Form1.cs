@@ -20,7 +20,7 @@ namespace Metrics_Project
         public static int DI = 0;
         public static int UFP = 0;
         public static double TCF = 0;
-        public static double FP = 0
+        public static double FP = 0;
         public Form1()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace Metrics_Project
 
         private void DI_Box_TextChanged(object sender, EventArgs e)
         {
-            DI = Convert.ToInt32(DI_Box.Text);
+         //   DI = Convert.ToInt32(DI_Box.Text);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,36 +129,7 @@ namespace Metrics_Project
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            comboBox1.Items.Add("Simple");
-            comboBox1.Items.Add("Average");
-            comboBox1.Items.Add("Complex");
-            this.Controls.Add(comboBox1);
-
-            comboBox2.Items.Add("Simple");
-            comboBox2.Items.Add("Average");
-            comboBox2.Items.Add("Complex");
-            this.Controls.Add(comboBox2);
-
-            comboBox3.Items.Add("Simple");
-            comboBox3.Items.Add("Average");
-            comboBox3.Items.Add("Complex");
-            this.Controls.Add(comboBox3);
-
-            comboBox4.Items.Add("Simple");
-            comboBox4.Items.Add("Average");
-            comboBox4.Items.Add("Complex");
-            this.Controls.Add(comboBox4);
-
-            comboBox5.Items.Add("Simple");
-            comboBox5.Items.Add("Average");
-            comboBox5.Items.Add("Complex");
-            this.Controls.Add(comboBox5);
-
-        }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
             UFP = EI + EO + EQ + ILF + EIF;
@@ -195,6 +166,172 @@ namespace Metrics_Project
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+           DI+=( Convert.ToInt32(comboBox6.SelectedItem.ToString()));
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            comboBox1.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
+            this.Controls.Add(comboBox1);
+
+            comboBox2.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
+            this.Controls.Add(comboBox2);
+
+            comboBox3.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
+            this.Controls.Add(comboBox3);
+
+            comboBox4.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
+            this.Controls.Add(comboBox4);
+
+            comboBox5.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
+            this.Controls.Add(comboBox5);
+
+            comboBox6.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox6);
+
+            comboBox7.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox7);
+
+            comboBox8.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox8);
+
+            comboBox9.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox9);
+
+            comboBox10.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox10);
+
+            comboBox11.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox11);
+
+            comboBox12.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox12);
+
+            comboBox13.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox13);
+
+            comboBox14.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox14);
+
+            comboBox15.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox15);
+
+            comboBox16.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox16);
+
+            comboBox17.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox17);
+
+            comboBox18.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox18);
+
+            comboBox19.Items.AddRange(new string[] { "0", "1", "2", "3", "4", "5" });
+            this.Controls.Add(comboBox19);
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox9.SelectedItem.ToString()));
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox8.SelectedItem.ToString()));
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox7.SelectedItem.ToString()));
+        }
+
+        private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox10.SelectedItem.ToString()));
+        }
+
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox11.SelectedItem.ToString()));
+        }
+
+        private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox12.SelectedItem.ToString()));
+        }
+
+        private void comboBox19_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox19.SelectedItem.ToString()));
+        }
+
+        private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox16.SelectedItem.ToString()));
+        }
+
+        private void comboBox17_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox17.SelectedItem.ToString()));
+        }
+
+        private void comboBox18_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox18.SelectedItem.ToString()));
+        }
+
+        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox13.SelectedItem.ToString()));
+        }
+
+        private void comboBox14_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox14.SelectedItem.ToString()));
+        }
+
+        private void comboBox15_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DI += (Convert.ToInt32(comboBox15.SelectedItem.ToString()));
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = DI.ToString();
         }
     }
 }
