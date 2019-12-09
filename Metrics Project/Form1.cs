@@ -26,6 +26,7 @@ namespace Metrics_Project
         public static int UFP = 0;
         public static double TCF = 0;
         public static double FP = 0;
+        public static int AVC = 0;
         public Form1()
         {
             InitializeComponent();
@@ -205,6 +206,21 @@ namespace Metrics_Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBox20.Items.AddRange(new string[] {
+                "Assembly Language" ,
+                "C",
+                "COBOL/FORTAN",
+                "Pascal",
+                "Ada",
+                "C++",
+                "Visual Basic",
+                "Object-oriented-language",
+                "Smalltalk",
+                "Code Generators /Power Builder" ,
+                "SQL/Orcale",
+                "SpreedSheets",
+                "Graphical Languages (icons)"});
+            this.Controls.Add(comboBox20);
 
             comboBox1.Items.AddRange(new string[] { "Simple", "Average", "Complex" });
             this.Controls.Add(comboBox1);
@@ -362,6 +378,40 @@ namespace Metrics_Project
         private void button9_Click(object sender, EventArgs e)
         {
             EIF_SUM += EIF;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox20_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox20.SelectedItem.ToString() == "Assembly Language") AVC = 320;
+            if (comboBox20.SelectedItem.ToString() == "C") AVC = 128;
+            if (comboBox20.SelectedItem.ToString() == "COBOL/FORTAN")AVC=105;
+            if (comboBox20.SelectedItem.ToString() == "Pascal") AVC = 90;
+            if (comboBox20.SelectedItem.ToString() == "Ada") AVC = 70;
+            if (comboBox20.SelectedItem.ToString() == "C++") AVC = 64;
+            if (comboBox20.SelectedItem.ToString() == "Visual Basic") AVC = 32;
+            if (comboBox20.SelectedItem.ToString() == "Object-oriented-language") AVC = 30;
+            if (comboBox20.SelectedItem.ToString() == "Smalltalk") AVC = 22;
+            if (comboBox20.SelectedItem.ToString() == "Code Generators /Power Builder") AVC = 15;
+            if (comboBox20.SelectedItem.ToString() == "SQL/Orcale") AVC = 12;
+            if (comboBox20.SelectedItem.ToString() == "SpreedSheets") AVC = 6;
+            if (comboBox20.SelectedItem.ToString() == "Graphical Languages (icons)") AVC = 4;
+
+            textBox2.Text = AVC.ToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = (FP * AVC).ToString();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
